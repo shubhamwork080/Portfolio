@@ -141,7 +141,7 @@ srtop.reveal('.about .content .resumebtn', { delay: 200 });
 
 /* SCROLL SKILLS */
 srtop.reveal('.skills .skill-category', { interval: 200 });
-srtop.reveal('.skills .skill-category ', { delay: 400 });
+srtop.reveal('.skills .skill-category ', { delay: 200 });
 
 /* SCROLL EDUCATION */
 srtop.reveal('.education .box', { interval: 200 });
@@ -149,9 +149,9 @@ srtop.reveal('.education .box', { interval: 200 });
 /* SCROLL PROJECTS */
 srtop.reveal('.work .box', { interval: 200 });
 
-/* SCROLL EXPERIENCE */
-srtop.reveal('.experience .timeline', { delay: 400 });
-srtop.reveal('.experience .timeline .container', { interval: 400 });
+/* SCROLL Certificate */
+srtop.reveal('.Certificate .certificate-list .cert', { interval: 200 });
+srtop.reveal('.Certificate .certificate-list .cert', {delay: 200 });
 
 /* SCROLL CONTACT */
 srtop.reveal('.contact .container', { delay: 400 });
