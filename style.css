@@ -10,12 +10,13 @@
   outline: none;
   border: none;
   transition: all 0.2s linear;
+  
 }
 
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -50,13 +51,13 @@ html::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: space-between;
   background-color: rgb(23, 27, 33);
-  width: 100%;
+  width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 1.7rem 10%;
+  padding: 1.7rem 10vw;
   font-size: large;
   box-shadow: 1px 1px 4px rgba(245, 222, 179, 0.692);
 }
@@ -110,27 +111,29 @@ html::-webkit-scrollbar-thumb {
   display: none;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 958px) {
   #menu {
-    display: block;
+    display: flex;
   }
 
   header .navbar {
     position: fixed;
     top: 6.5rem;
     right: -120%;
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
+    display: flex;
     text-align: left;
     align-items: flex-start;
-    background-color: #3aa8a0;
+   background-color: rgb(23, 27, 33);
+    
   }
-
+  
   header .navbar ul {
     flex-flow: column;
     padding: 1rem;
   }
-
   header .navbar ul li {
     text-align: center;
     width: 100%;
@@ -138,33 +141,31 @@ html::-webkit-scrollbar-thumb {
     border-radius: 0.5rem;
     width: 26rem;
   }
-
   header .navbar ul li a {
     display: block;
     padding: 1rem;
     text-align: left;
-    color: #fff;
+    color:wheat;
     font-size: 2rem;
   }
-
   header .navbar ul li a.active,
   header .navbar ul li a:hover {
     padding: 1rem;
-    color: #fff;
+    color: rgb(21, 188, 133);
     border-radius: 0.5rem;
-    border-bottom: 0.5rem solid aquamarine;
-  }
+    background-color:rgb(48, 50, 53) ;
+    text-decoration: none;
 
+  }
   .fa-times {
     transform: rotate(180deg);
   }
-
   header .navbar.nav-toggle {
     right: 0;
   }
 }
-
 /* hamburger icon ends */
+
 .home {
   position: relative;
   background-color: rgb(34, 40, 49);
@@ -173,22 +174,22 @@ html::-webkit-scrollbar-thumb {
   gap: 1.5rem;
   min-height: 100vh;
   align-items: center;
-  padding-top: 5rem;
-  justify-content: center;
-  padding-left: 5rem;
-  padding-right: 8rem;
+  padding-top: 8rem;
+  padding-left:  10vw;
+  
 }
 
 .homelift {
-
-  padding-top: 1rem;
   width: 50%;
+  padding-top: 1rem;
+  
 }
 
 .homelift h2 {
   color: wheat;
   font-size: 5rem;
   font-weight: 800;
+  
 
 }
 
@@ -314,24 +315,42 @@ html::-webkit-scrollbar-thumb {
 
 /* hero media queries starts*/
 @media (max-width: 450px) {
-  .home .btn {
-    margin: 4rem 0;
+  .home{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .home .homelift{
+    width: auto;
+  }
+  
+  .home .homelift h2{
+    font-size: 5rem;
+    
+  }
+  .home .homelift .btn {
+    
+    font-size: 1rem;
   }
 
   .socials {
     margin-top: 12rem;
   }
 
-  .home .image img {
-    margin-top: -12rem;
+  .home .homeright img {
+    
+    width: 35rem;
+    height: auto;
+    padding-left: 0;
   }
 
-  .home .content p {
-    font-size: 2.2rem;
+  .home .homelift p {
+    font-size: 3rem;
   }
 
-  .home .content p span {
-    font-size: 2.2rem;
+  .home .homelift p span {
+    font-size: 3rem;
   }
 }
 
@@ -469,7 +488,7 @@ html::-webkit-scrollbar-thumb {
 
   .about .row .image img {
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
     mix-blend-mode: normal;
   }
 
@@ -567,7 +586,17 @@ html::-webkit-scrollbar-thumb {
   object-fit: contain;
 }
 
-
+/* skills media queries starts*/
+@media screen and (max-width: 900px){
+.skills-container{
+  display: flex;
+  flex-wrap: wrap;
+   width: 100%;
+}
+.skill-category{
+ width: 200px;
+}
+}
 /* skills media queries ends*/
 /* skills section ends */
 
@@ -802,7 +831,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .work .box .layer .btns {
-  color: #fff;
+  
   cursor: pointer;
   transition: 0.3s ease;
   display: flex;
@@ -828,7 +857,20 @@ html::-webkit-scrollbar-thumb {
 .work .box .layer .btn:hover i {
   transform: translateX(5px);
 }
-
+@media screen and (max-width: 600px){
+  .work .box .layer p {
+  color: wheat;
+  font-size: 1.2rem;
+}
+.work .box .layer h3 {
+  font-size: 1.5rem;
+  color: aquamarine;
+  
+}
+.work .box .layer{
+  height: 20px;
+}
+}
 
 
 
